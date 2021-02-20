@@ -1,0 +1,4 @@
+{
+    "serviceport": 8080,
+    "cookiesecret": "YOUR SECRET HERE"
+}
