@@ -31,3 +31,21 @@ $ node index.js
 ```
 
 Now you can access your website by opening `http://localhost:{YOUR PORT}`
+
+### Configurate math problems
+
+Locate the `problems.json` file in the main directory, you can freely add or remove math problems
+
+```
+{
+    "problems": [
+        {
+            "task": "10x = 100",
+            "answer": "10",
+            "task_message": "What is the value of x"
+        }
+    ]
+}
+```
+
+You need to restart the application so the changes take effect
