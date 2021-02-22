@@ -26,7 +26,7 @@ app.use('/api', require('./router/api'));
 //index.html to default
 app.get('/', (req, res) => {
     fs.readFile(__dirname + '/public/index.html', 'utf8', (err, data) => {
-        if(err) res.json({status: 400, message: 'An internal error occurred'})
+        if(err) res.json({status: 500, message: 'An internal error occurred'})
         res.send(data);
     });
 });
@@ -34,22 +34,23 @@ app.get('/', (req, res) => {
 //math.html to default
 app.get('/solve', (req, res) => {
     fs.readFile(__dirname + '/public/math.html', 'utf8', (err, data) => {
-        if(err) res.json({status: 400, message: 'An internal error occurred'})
+        if(err) res.json({status: 500, message: 'An internal error occurred'})
+        res.send(data);
+    });
+});
+
+//result.html to default
+app.get('/result', (req, res) => {
+    fs.readFile(__dirname + '/public/result.html', 'utf8', (err, data) => {
+        if(err) res.json({status: 500, message: 'An internal error occurred'})
         res.send(data);
     });
 });
 
 //leaderboard.html to default
-app.get('/result', (req, res) => {
+app.get('/leaderboard', (req, res) => {
     fs.readFile(__dirname + '/public/leaderboard.html', 'utf8', (err, data) => {
-        if(err) res.json({status: 400, message: 'An internal error occurred'})
-        res.send(data);
-    });
-});
-
-app.get('/result', (req, res) => {
-    fs.readFile(__dirname + '/public/leaderboard.html', 'utf8', (err, data) => {
-        if(err) res.json({status: 400, message: 'An internal error occurred'})
+        if(err) res.json({status: 500, message: 'An internal error occurred'})
         res.send(data);
     });
 });
