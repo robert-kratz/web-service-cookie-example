@@ -7,17 +7,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/bundle.js"></script>
     <link rel="stylesheet" href="assets/style.css">
-    <title>Mathsolver | Math</title>
+    <title>Mathsolver | Solve</title>
 </head>
 <body>
     <section>
         <div>
-            <span>You are playing as Robert Kratz</span>
-            <p>Task 1 / 10</p>
-            <h1>10x = 100</h1>
-            <input type="text" name="answer" id="answer-field">
-            <p>What is the value of x?</p>
-            <input type="submit" value="Submit">
+            <span id="title"></span>
+            <p id="task-no"></p>
+            <h1 id="task"></h1>
+            <input id="task-imp" type="text" name="answer" id="answer-field">
+            <p id="task-q"></p>
+            <input id="task-submit" type="submit" value="Submit">
+            <p id="error-message"></p>
         </div>
     </section>
 </body>
