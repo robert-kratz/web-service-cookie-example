@@ -23,6 +23,12 @@ app.use(express.json());
 //Binding api router
 app.use('/api', require('./router/api'));
 
+//Middleware to check session
+const checkSession =  (req, res, next) => {
+    if(req.cookies.user == null) return res.status(401).json({status: 401, message: "Unauthorised, redirecting client to register page"});
+    next();
+};
+
 //index.html to default
 app.get('/', (req, res) => {
     fs.readFile(__dirname + '/public/index.html', 'utf8', (err, data) => {
@@ -32,7 +38,7 @@ app.get('/', (req, res) => {
 });
 
 //math.html to default
-app.get('/solve', (req, res) => {
+app.get('/solve', checkSession, (req, res) => {
     fs.readFile(__dirname + '/public/math.html', 'utf8', (err, data) => {
         if(err) res.json({status: 500, message: 'An internal error occurred'})
         res.send(data);
@@ -40,16 +46,8 @@ app.get('/solve', (req, res) => {
 });
 
 //result.html to default
-app.get('/result', (req, res) => {
+app.get('/result', checkSession, (req, res) => {
     fs.readFile(__dirname + '/public/result.html', 'utf8', (err, data) => {
-        if(err) res.json({status: 500, message: 'An internal error occurred'})
-        res.send(data);
-    });
-});
-
-//leaderboard.html to default
-app.get('/leaderboard', (req, res) => {
-    fs.readFile(__dirname + '/public/leaderboard.html', 'utf8', (err, data) => {
         if(err) res.json({status: 500, message: 'An internal error occurred'})
         res.send(data);
     });
