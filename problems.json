@@ -11,23 +11,8 @@
             "task_message": ""
         },
         {
-            "task": "2 * 2",
-            "answer": "4",
-            "task_message": ""
-        },
-        {
-            "task": "3 * 4",
-            "answer": "12",
-            "task_message": ""
-        },
-        {
-            "task": "12 * 10",
-            "answer": "120",
-            "task_message": ""
-        },
-        {
-            "task": "77 / 7",
-            "answer": "11",
+            "task": "2 * 5",
+            "answer": "10",
             "task_message": ""
         }
     ]
