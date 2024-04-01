@@ -1,6 +1,7 @@
 # web-service-cookie-example
 
-This project should explain the importance of cookies online based on a simple website, to solve mathematical problems. A user should enter his nickname and age to solve ten problems, after that, his nickname and age is saved and presentet on a leaderboard.
+This project is designed to illustrate the role of online cookies using a straightforward website that allows users to solve mathematical problems. To participate, users must enter their nickname and age before tackling ten problems. Upon completion, the website saves and displays their nickname and age on a leaderboard, showcasing the practical application of cookies for personalized user experiences.
+
 
 ### Getting started
 
